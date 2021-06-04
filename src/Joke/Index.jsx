@@ -10,7 +10,7 @@ const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
     const addDownLike = () => setDownLikes(downLikes + 1);
 
     return (
-        <div className={ dislikes > likes ? "joke--not-so-good" : "joke" }>
+        <div className={ downLikes > upLikes ? "joke joke--not-so-good" : "joke" }>
             <div className="joke__body">
                 <div className="joke__user">
                     <img className="user-avatar" src={userAvatar} />
